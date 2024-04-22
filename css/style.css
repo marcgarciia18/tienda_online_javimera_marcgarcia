@@ -16,22 +16,22 @@ body{
     top: 0;
 
 }
-.headercat {
-    position: sticky;
-    position: -webkit-sticky;
+.bannercat {
+    position: static;
     top: 0;
     background-image: url(../img/bannercat.png);
     background-size: cover;
     width: 100%;
+    height: 500px;
 }
 
-.headercast {
-    position: sticky;
-    position: -webkit-sticky;
+.bannercast {
+    position: static;
     top: 0;
     background-image: url(../img/bannercast.png);
     background-size: cover;
     width: 100%;
+    height: 500px;
 }
 
 h1{
@@ -72,11 +72,60 @@ footer p {
 }
 
 @media screen and (max-width: 800px){
-header {
-    width: 100%;
-}
+    h1{
+        font-size: 30px;
+    }
 
-.pictienda{
-    width: 100%;
-}
-}
+    p{
+        font-size: 15px;
+    }
+    
+    header {
+        width: 100%;
+        margin: 0;
+        top: 0;
+    }
+
+    .bannercat,.bannercast {
+        width: 100%;
+        height: 250px;
+        position: static;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .bannercast, .bannercat img {
+        width: 100%;
+        justify-content: center;
+      }
+   
+    .pictienda {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    
+     .pictienda section {
+        width: 50%;
+      }
+
+      section img {
+        width: 205px;
+        height: 350px;
+      }
+
+      body{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+     footer {
+        width: 100%;
+      }
+
+    footer a {
+        font-size: 20px;
+    }
+    }
+
